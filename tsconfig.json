@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+      "jsx": "preserve",
+      "target": "es5",
+      "module": "esnext",
+      "strict": true,
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "allowJs": true,
+      "noEmit": true,
+      "noImplicitThis": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noUnusedLocals": false,
+      "allowUnusedLabels": true, // 不报告未使用标签错误
+      "diagnostics": false, // 显示诊断信息
+      "types": ["webpack-env"],
+      "paths": {
+        "@*": ["src/*"],
+        "@http/*": ["src/http/*"],
+        "@static/*": ["src/static/*"],
+        "@components/*": ["src/components/*"],
+        "@pages/*": ["src/pages/*"],
+        "@utils/*": ["src/utils/*"]
+      },
+      "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    },
+    "exclude": ["node_modules"]
+  }
+  

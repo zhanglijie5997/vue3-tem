@@ -1,0 +1,1 @@
+export const baseUrl: string = 'https://heybooks-test-console.oss-cn-shenzhen.aliyuncs.com/img/';

@@ -1,0 +1,42 @@
+.width690 {
+    width: 690px;
+    margin: 0 auto;
+}
+.line {
+    width: 100vw;
+    height: 18px;
+    background: #f1f1f1;
+}
+
+.showTwoText {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.boxShadow {
+    box-shadow: -1px 3px 12px 3px rgba(147, 147, 147, 0.2);
+}
+
+.ready {
+    padding-left: 15px;
+    font-size: 28px;
+    line-height: 40px;
+    position: relative;
+    text-align: left;
+    font-weight: bold;
+    &::before {
+      content: "";
+      width: 6px;
+      height: 20px;
+      background: #fc4545;
+      position: absolute;
+      border-radius: 5px;
+      top: 8px;
+      left: 0;
+    }
+  }
