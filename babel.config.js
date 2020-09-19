@@ -8,9 +8,9 @@ module.exports = {
       "source": "@vue/runtime-dom"
     }],
     ["import", {
-      "libraryName": "vant",
+      "libraryName": "ant-design-vue",
       "libraryDirectory": "es",
-      "style": true
+      "style": "css"
     }]
   ]
 }

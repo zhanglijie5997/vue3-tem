@@ -3,7 +3,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ['js', 'css']
 const os = require("os");
 const TerserPlugin = require("terser-webpack-plugin");
-
+const varPostCss = require("postcss-css-variables");
 // vw 适配插件
 const postcssAspectRatioMini = require('postcss-aspect-ratio-mini');
 const postcssWriteSvg = require('postcss-write-svg');
@@ -55,9 +55,10 @@ module.exports = {
         loaderOptions: {
             postcss: {
                 plugins: [
+                    varPostCss({ preserve : false, preserveAtRulesOrder: true }),
                     require('postcss-px-to-viewport')({
-                        "viewportWidth": 750,
-                        "viewportHeight": 1334,
+                        "viewportWidth": 1080,
+                        "viewportHeight": 921,
                         "unitPrecision": 3,
                         "viewportUnit": "vw",
                         "selectorBlackList": [".ignore"],
@@ -78,7 +79,8 @@ module.exports = {
             },
             scss: {
                 additionalData: `@import "@/assets/css/global.scss";`
-            }
+            },
+            less: {}
         }
     },
     chainWebpack: (config) => {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Toast } from 'vant';
+import { message } from 'ant-design-vue';
 
 
 const axiosInit = axios.create({
@@ -21,16 +21,16 @@ axiosInit.interceptors.request.use(config => {
 axiosInit.interceptors.response.use(config => {
     switch (config.data.code) {
         case 200:
-            
+            message.success(config.data.message);
             break;
         default:
-            Toast.fail(config.data.message);
+           
             break;
     }
     return (config.data);
 }, err => {
     console.log(err);
-    Toast.fail("网络错误")
+    // Toast.fail("网络错误")
     Promise.reject(err);
 });
 
