@@ -3,7 +3,7 @@ module.exports = {
     '@vue/cli-plugin-babel/preset'
   ],
   "plugins": [
-    ["@hcysunyang/vue-next-jsx", {
+    ["@vue/babel-plugin-jsx", {
       // Specify source
       "source": "@vue/runtime-dom"
     }],
