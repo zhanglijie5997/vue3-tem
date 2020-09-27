@@ -9,6 +9,7 @@
     "add": "git add . && git commit -m"
   },
   "dependencies": {
+    "@vue/babel-plugin-jsx": "^1.0.0-rc.3",
     "core-js": "^3.6.5",
     "less-loader": "^7.0.1",
     "serve": "^11.3.2",

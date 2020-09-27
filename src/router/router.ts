@@ -4,7 +4,7 @@ const routes = [
     {
         name: "index",
         path: '/',
-        component: () => import(/* webpackChunkName: "index" */ '@pages/index/index.vue'),
+        component: () => import(/* webpackChunkName: "index" */ '@pages/index/indexTsx.tsx'),
         meta: {
             title: '书籍详情'
         }

@@ -15,6 +15,7 @@ interface ReactiveType {
 }
 export default function() {
     const id = '258';
+    // const test = 
     const state = reactive<ReactiveType>({
         name: '', 
         press: '', 

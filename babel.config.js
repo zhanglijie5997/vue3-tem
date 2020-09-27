@@ -1,11 +1,13 @@
 module.exports = {
   presets: [
-    '@vue/cli-plugin-babel/preset'
+    '@vue/cli-plugin-babel/preset',
+    "@babel/env"
   ],
   "plugins": [
-    ["@hcysunyang/vue-next-jsx", {
+    ["@vue/babel-plugin-jsx", {
       // Specify source
-      "source": "@vue/runtime-dom"
+      "source": "@vue/runtime-dom",
+      "optimizate": true
     }],
     ["import", {
       "libraryName": "ant-design-vue",
