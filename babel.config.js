@@ -6,8 +6,8 @@ module.exports = {
   "plugins": [
     ["@vue/babel-plugin-jsx", {
       // Specify source
-      "source": "@vue/runtime-dom",
-      "optimizate": true
+      // "source": "@vue/runtime-dom",
+      // "optimizate": true
     }],
     ["import", {
       "libraryName": "ant-design-vue",

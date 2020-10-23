@@ -2,11 +2,11 @@ import { get, PublicType } from '@http/http'
 
 const networdUrl = {
     // 书籍信息     参数 = id
-    appBooksBaseBook: '/app/booksBase/book',
+    appBooksBaseBook: 'skincare/postUploadImg',
     // 获取书籍作者信息
-    appBooksBaseAuthor: '/app/booksBase/author',
+    appBooksBaseAuthor: 'skincare/postUploadImg',
     // 书籍-精彩解读
-    appBooksBaseBookProject: '/app/booksBase/book/project'
+    appBooksBaseBookProject: 'skincare/postUploadImg'
 }
 
 

@@ -2,6 +2,10 @@ export interface LoginStateType {
     token: string, // 用户token
 }
 
+export interface StoreActionType {
+    commit: (name: string, data?: any) => void
+}
+
 export const LoginMutations = {
     changeToken: "changeToken",
 }
@@ -18,7 +22,7 @@ const mutations = {
 };
 
 const actions = {
-    [LoginMutations.changeToken]: (action: StoreAction.StoreActionType, data: string) => {
+    [LoginMutations.changeToken]: (action: StoreActionType, data: string) => {
         action.commit(LoginMutations.changeToken, data)
     }
 };

@@ -14,12 +14,12 @@ function resolve(dir) {
 }
 
 module.exports = {
-
     publicPath: './',
     assetsDir: 'static',
     outputDir: 'dist',
     parallel: os.cpus().length > 1,
     productionSourceMap: false,
+    lintOnSave: false,
     devServer: {
         hot: true,
         port: '8080',
@@ -31,7 +31,7 @@ module.exports = {
         },
         proxy: {
             '/api': {
-                target: process.env.VUE_APP_URL,
+                target: "https://app.nxteams.com",
                 ws: false,
                 changOrigin: true,
                 pathRewrite: {
@@ -56,17 +56,17 @@ module.exports = {
             postcss: {
                 plugins: [
                     varPostCss({ preserve : false, preserveAtRulesOrder: true }),
-                    require('postcss-px-to-viewport')({
-                        "viewportWidth": 1080,
-                        "viewportHeight": 921,
-                        "unitPrecision": 3,
-                        "viewportUnit": "vw",
-                        "selectorBlackList": [".ignore"],
-                        "minPixelValue": 1,
-                        "mediaQuery": false,
-                        "replace": true,
-                        "exclude": /(\/|\\)(node_modules)(\/|\\)/,
-                      }),
+                    // require('postcss-px-to-viewport')({
+                    //     "viewportWidth": 1920,
+                    //     "viewportHeight": 921,
+                    //     "unitPrecision": 3,
+                    //     "viewportUnit": "vw",
+                    //     "selectorBlackList": [".ignore"],
+                    //     "minPixelValue": 1,
+                    //     "mediaQuery": false,
+                    //     "replace": true,
+                    //     "exclude": /(\/|\\)(node_modules)(\/|\\)/,
+                    //   }),
                     postcssAspectRatioMini({}),
                     postcssWriteSvg({
                       utf8: false
